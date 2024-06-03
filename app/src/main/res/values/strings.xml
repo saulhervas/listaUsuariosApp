@@ -1,3 +1,21 @@
 <resources>
+
     <string name="app_name">listaUsuariosApp</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tv_main">Listado de Usuarios</string>
+    <string name="btn_main">Añadir Usuario</string>
+    <string name="tv_add_info">Rellena los siguientes campos</string>
+    <string name="btn_location">Obtener Localización</string>
+    <string name="user_details">Datos del Usuario</string>
+    <string name="btn_save">Guardar</string>
+    <string name="name">Nombre:</string>
+    <string name="favorite_color">Color Favorito:</string>
+    <string name="date_text">Fecha de Nacimiento:</string>
+    <string name="city_text">Ciudad Favorita:</string>
+    <string name="number_text">Numero Favorito:</string>
+    <string name="location_text">Localización:</string>
+    <string name="btn_edit">Editar</string>
+    <string name="btn_map">Ver en Mapa</string>
+
 </resources>
