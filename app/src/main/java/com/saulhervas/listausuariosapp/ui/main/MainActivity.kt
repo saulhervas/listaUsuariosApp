@@ -1,4 +1,4 @@
-package com.saulhervas.listausuariosapp.ui
+package com.saulhervas.listausuariosapp.ui.main
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge

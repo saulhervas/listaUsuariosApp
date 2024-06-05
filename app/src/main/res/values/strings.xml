@@ -17,5 +17,6 @@
     <string name="location_text">Localización:</string>
     <string name="btn_edit">Editar</string>
     <string name="btn_map">Ver en Mapa</string>
+    <string name="city_map">Mapa de la ciudad favorita</string>
 
 </resources>

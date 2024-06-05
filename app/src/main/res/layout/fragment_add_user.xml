@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".AddUser">
+    tools:context=".AddUserFragment">
 
     <Toolbar
         android:id="@+id/toolbar"
@@ -70,7 +70,7 @@
         android:id="@+id/et_city"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:inputType="date"
+        android:inputType="text"
         android:layout_marginTop="15dp"
         android:hint="Ciudad Favorita"
         android:layout_marginHorizontal="50dp"
