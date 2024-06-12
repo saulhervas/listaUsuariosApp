@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/main_fragment2"
-        android:name="com.saulhervas.listausuariosapp.ui.main.MainFragment"
+        android:name="com.saulhervas.listausuariosapp.ui.fragments.MainFragment"
         android:label="fragment_main_fragment"
         tools:layout="@layout/fragment_main_fragment" >
         <action
@@ -17,13 +17,13 @@
 
     <fragment
         android:id="@+id/add_user"
-        android:name="com.saulhervas.listausuariosapp.AddUserFragment"
+        android:name="com.saulhervas.listausuariosapp.ui.fragments.AddUserFragment"
         android:label="fragment_add_user"
         tools:layout="@layout/fragment_add_user" />
 
     <fragment
         android:id="@+id/userDetail"
-        android:name="com.saulhervas.listausuariosapp.UserDetail"
+        android:name="com.saulhervas.listausuariosapp.ui.fragments.UserDetailFragment"
         android:label="fragment_user_detail"
         tools:layout="@layout/fragment_user_detail" />
 
