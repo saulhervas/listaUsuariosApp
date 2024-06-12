@@ -19,7 +19,11 @@
         android:id="@+id/add_user"
         android:name="com.saulhervas.listausuariosapp.ui.fragments.AddUserFragment"
         android:label="fragment_add_user"
-        tools:layout="@layout/fragment_add_user" />
+        tools:layout="@layout/fragment_add_user">
+        <action
+            android:id="@+id/action_add_user_to_main_fragment2"
+            app:destination="@id/main_fragment2" />
+    </fragment>
 
     <fragment
         android:id="@+id/userDetail"

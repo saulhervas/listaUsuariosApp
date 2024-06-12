@@ -156,6 +156,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="23dp"
         android:text="@string/btn_edit"
+        android:backgroundTint="@color/color_toolbar"
         app:layout_constraintTop_toBottomOf="@+id/guideline2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -166,6 +167,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="23dp"
         android:text="@string/btn_map"
+        android:backgroundTint="@color/color_toolbar"
         app:layout_constraintTop_toBottomOf="@+id/btn_edit"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
