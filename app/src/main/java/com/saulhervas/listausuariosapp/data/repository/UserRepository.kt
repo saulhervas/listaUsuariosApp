@@ -1,31 +1,30 @@
 package com.saulhervas.listausuariosapp.data.repository
 
+import androidx.lifecycle.LiveData
+import com.saulhervas.listausuariosapp.data.dao.UserDao
 import com.saulhervas.listausuariosapp.data.model.User
-import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.StateFlow
-
-class UserRepository {
-    private val _users = MutableStateFlow<List<User>>(emptyList())
-    val users: StateFlow<List<User>> = _users
 
 
-    fun addUser(user: User) {
-        _users.value = users.value + user
+class UserRepository(private val userDao: UserDao) {
+
+    val readAllData: LiveData<List<User>> = userDao.getAllUsers()
+
+    suspend fun addUser(user: User) {
+        userDao.addUser(user)
     }
 
-    fun updateUser(index: Int, user: User) {
-        _users.value = users.value.toMutableList().apply {
-            this[index] = user
-        }
+    suspend fun updateUser(user: User) {
+        userDao.updateUser(user)
     }
 
-    fun deleteUser(index: Int) {
-        _users.value = users.value.toMutableList().apply {
-            this.removeAt(index)
-        }
+    suspend fun updateList(list: List<User>) {
+        userDao.updateList(list)
     }
 
-    fun getUser(index: Int): User? {
-        return _users.value.getOrNull(index)
+    suspend fun deleteUser(user: User) {
+        userDao.deleteUser(user)
     }
+
+
+
 }

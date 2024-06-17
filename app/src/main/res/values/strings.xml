@@ -6,6 +6,7 @@
     <string name="tv_main">Listado de Usuarios</string>
     <string name="btn_main">Añadir Usuario</string>
     <string name="tv_add_info">Rellena los siguientes campos</string>
+    <string name="tv_edit_info">Edita los siguientes campos</string>
     <string name="btn_location">Obtener Localización</string>
     <string name="user_details">Datos del Usuario</string>
     <string name="btn_save">Guardar</string>

@@ -1,17 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".UserDetail">
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragments.AddUserFragment">
 
-    <Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@color/color_toolbar"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="28dp"
+        android:padding="15dp"
+        android:backgroundTint="@color/white"
+        android:src="@drawable/ic_back"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -22,167 +37,195 @@
         android:fontFamily="@font/poetsen_one_regular"
         android:gravity="center"
         android:padding="20dp"
-        android:text="@string/user_details"
+        android:layout_marginTop="25dp"
+        android:text="@string/tv_edit_info"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tv_label_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="23dp"
+        android:id="@+id/tvName"
+        android:layout_width="76dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="4dp"
+        android:gravity="center_vertical"
         android:text="@string/name"
-        app:layout_constraintBottom_toTopOf="@id/tv_label_color"
-        app:layout_constraintEnd_toStartOf="@id/guideline"
+        android:textSize="16sp"
+        android:layout_marginStart="30dp"
+        app:layout_constraintEnd_toStartOf="@+id/et_update_name"
+        app:layout_constraintHorizontal_bias="0.303"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_detail" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_detail" />
 
-    <TextView
-        android:id="@+id/tv_name"
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/et_update_name"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="23dp"
-        app:layout_constraintBottom_toTopOf="@+id/tv_color"
+        android:layout_marginHorizontal="50dp"
+        android:hint="@string/name"
+        android:inputType="textCapWords"
+        android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/guideline"
-        app:layout_constraintTop_toBottomOf="@id/tv_detail"
-        tools:text="Juan Pablo" />
+        app:layout_constraintStart_toEndOf="@+id/tvName"
+        app:layout_constraintTop_toBottomOf="@+id/tv_detail" />
 
     <TextView
-        android:id="@+id/tv_label_color"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="23dp"
+        android:id="@+id/tvColor"
+        android:layout_width="122dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center_vertical"
         android:text="@string/favorite_color"
-        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/et_update_color"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_label_name" />
+        app:layout_constraintTop_toBottomOf="@+id/tvName" />
 
-    <TextView
-        android:id="@+id/tv_color"
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/et_update_color"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="23dp"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="15dp"
+        android:hint="Color Favorito"
+        android:textSize="15sp"
+        android:inputType="textCapWords"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/guideline"
-        app:layout_constraintTop_toBottomOf="@+id/tv_name"
-        tools:text="Azul" />
+        app:layout_constraintTop_toBottomOf="@+id/et_update_name"
+        app:layout_constraintStart_toEndOf="@+id/tvColor" />
 
     <TextView
-        android:id="@+id/tv_label_date"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="23dp"
+        android:id="@+id/tvDate"
+        android:layout_width="144dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center_vertical"
         android:text="@string/date_text"
-        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toStartOf="@+id/et_update_date"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_label_color" />
+        app:layout_constraintTop_toBottomOf="@+id/tvColor" />
 
-    <TextView
-        android:id="@+id/tv_date"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="23dp"
+    <EditText
+        android:id="@+id/et_update_date"
+        android:layout_width="154dp"
+        android:layout_height="44dp"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="15dp"
+        android:clickable="false"
+        android:focusable="false"
+        android:hint="Fecha de Nacimiento"
+        android:inputType="date"
+        android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/guideline"
-        app:layout_constraintTop_toBottomOf="@+id/tv_color"
-        tools:text="12/01/2023" />
+        app:layout_constraintStart_toEndOf="@+id/tvDate"
+        app:layout_constraintTop_toBottomOf="@+id/et_update_color" />
 
     <TextView
-        android:id="@+id/tv_label_city"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="23dp"
+        android:id="@+id/tvCity"
+        android:layout_width="144dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center_vertical"
         android:text="@string/city_text"
-        app:layout_constraintEnd_toEndOf="@+id/guideline"
+        android:textSize="15sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_label_date" />
+        app:layout_constraintTop_toBottomOf="@+id/tvDate"
+        app:layout_constraintEnd_toStartOf="@+id/et_update_city"
 
-    <TextView
-        android:id="@+id/tv_city"
-        android:layout_width="wrap_content"
+        />
+
+    <EditText
+        android:id="@+id/et_update_city"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="23dp"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="15dp"
+        android:hint="Ciudad Favorita"
+        android:inputType="textCapWords"
+        android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/guideline"
-        app:layout_constraintTop_toBottomOf="@id/tv_date"
-        tools:text="Madrid" />
+        app:layout_constraintTop_toBottomOf="@+id/et_update_date"
+        app:layout_constraintStart_toEndOf="@+id/tvCity" />
 
     <TextView
-        android:id="@+id/tv_label_number"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="23dp"
+        android:id="@+id/tvNumber"
+        android:layout_width="144dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center_vertical"
         android:text="@string/number_text"
-        app:layout_constraintEnd_toEndOf="@+id/guideline"
+        android:textSize="15sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_label_city" />
+        app:layout_constraintTop_toBottomOf="@+id/tvCity"
+        app:layout_constraintEnd_toStartOf="@+id/et_update_number" />
 
-    <TextView
-        android:id="@+id/tv_number"
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/et_update_number"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="23dp"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="15dp"
+        android:hint="Número Favorito"
+        android:textSize="15sp"
+        android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/guideline"
-        app:layout_constraintTop_toBottomOf="@+id/tv_city"
-        tools:text="7" />
+        app:layout_constraintTop_toBottomOf="@+id/et_update_city"
+        app:layout_constraintStart_toEndOf="@+id/tvNumber" />
 
     <TextView
-        android:id="@+id/tv_label_location"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="23dp"
+        android:id="@+id/tvLocation"
+        android:layout_width="144dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center_vertical"
         android:text="@string/location_text"
-        app:layout_constraintEnd_toEndOf="@+id/guideline"
+        android:textSize="15sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_label_number" />
+        app:layout_constraintTop_toBottomOf="@+id/tvNumber"
+        app:layout_constraintEnd_toStartOf="@+id/et_update_location_text" />
 
-    <TextView
-        android:id="@+id/tv_location"
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/et_update_location_text"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="23dp"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="15dp"
+        android:hint="Localización"
+        android:textSize="15sp"
+        android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/guideline"
-        app:layout_constraintTop_toBottomOf="@+id/tv_number"
-        tools:text="Madrid" />
-
-    <Button
-        android:id="@+id/btn_edit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="23dp"
-        android:text="@string/btn_edit"
-        app:layout_constraintTop_toBottomOf="@+id/guideline2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/et_update_number"
+        app:layout_constraintStart_toEndOf="@+id/tvLocation" />
 
     <Button
         android:id="@+id/btn_map"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="23dp"
         android:text="@string/btn_map"
-        app:layout_constraintTop_toBottomOf="@+id/btn_edit"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/color_toolbar"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@+id/et_update_location_text"
+        app:layout_constraintEnd_toEndOf="parent" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline"
+    <Button
+        android:id="@+id/btn_edit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="191dp" />
+        android:text="@string/btn_edit"
+        android:backgroundTint="@color/color_toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_map" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="424dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

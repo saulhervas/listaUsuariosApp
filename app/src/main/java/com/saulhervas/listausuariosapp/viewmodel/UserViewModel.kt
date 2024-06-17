@@ -1,46 +1,53 @@
 package com.saulhervas.listausuariosapp.viewmodel
 
-import androidx.lifecycle.ViewModel
+import android.app.Application
+import androidx.lifecycle.AndroidViewModel
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.viewModelScope
+import com.saulhervas.listausuariosapp.data.database.UserDataBase
 import com.saulhervas.listausuariosapp.data.model.User
 import com.saulhervas.listausuariosapp.data.repository.UserRepository
-import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-class UserViewModel : ViewModel() {
 
-    private val repository = UserRepository()
-    val users: StateFlow<List<User>> = repository.users
+class UserViewModel(application: Application) : AndroidViewModel(application) {
 
-    private val _currentUser = MutableStateFlow<User?>(null)
-    val currentUse: StateFlow<User?> = _currentUser
+    val readAllData: LiveData<List<User>>
+    private val repository: UserRepository
 
+    init {
+        val userDao = UserDataBase.getDatabase(application).userDao()
+        repository = UserRepository(userDao)
+        readAllData = repository.readAllData
+    }
 
     fun addUser(user: User) {
-        viewModelScope.launch {
+        viewModelScope.launch(Dispatchers.IO) {
             repository.addUser(user)
         }
     }
 
-    fun updateUser(index: Int, user: User) {
-        viewModelScope.launch {
-            repository.updateUser(index, user)
+    fun updateUser(user: User) {
+        viewModelScope.launch(Dispatchers.IO) {
+            repository.updateUser(user)
         }
     }
 
-    fun deleteUser(index: Int) {
-        viewModelScope.launch {
-            repository.deleteUser(index)
+    fun updateList(list: List<User>) {
+        viewModelScope.launch(Dispatchers.IO) {
+            repository.updateList(list)
         }
     }
 
-    fun getUser(index: Int) {
-        _currentUser.value = repository.getUser(index)
+    fun deleteUser(user: User) {
+        viewModelScope.launch(Dispatchers.IO) {
+            repository.deleteUser(user)
+        }
     }
 
-    fun setCurrentUser(user: Int) {
-        _currentUser.value = repository.getUser(user)
-    }
+
+
+
 }
 
