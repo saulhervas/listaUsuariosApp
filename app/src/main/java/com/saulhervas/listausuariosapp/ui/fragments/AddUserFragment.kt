@@ -47,12 +47,12 @@ class AddUserFragment : Fragment() {
 
         binding.btnSave.setOnClickListener {
             insertDataToDatabase()
-            binding.progressBar.visibility = View.VISIBLE
         }
         binding.etDate.setOnClickListener { showDatePickerDialog() }
 
         binding.btnLocation.setOnClickListener {
             generateRandomLocation()
+            hideKeyboard()
         }
 
         binding.imageButton.setOnClickListener {
@@ -119,30 +119,16 @@ class AddUserFragment : Fragment() {
         }
     }
 
-    //    private fun getLocation() {
-//        if (ContextCompat.checkSelfPermission(requireContext(), Manifest.permission.ACCESS_FINE_LOCATION)
-//            != PackageManager.PERMISSION_GRANTED) {
-//            ActivityCompat.requestPermissions(
-//                requireActivity(),
-//                arrayOf(Manifest.permission.ACCESS_FINE_LOCATION),
-//                PERMISSION_REQUEST_LOCATION
-//            )
-//        } else {
-//            fusedLocationClient.lastLocation
-//                .addOnCompleteListener(OnCompleteListener<Location> { task ->
-//                    if (task.isSuccessful && task.result != null) {
-//                        val location = task.result
-//                        binding.etLocationText.setText("${location.latitude}, ${location.longitude}")
-//                    } else {
-//                        Toast.makeText(requireContext(), "Unable to get location", Toast.LENGTH_SHORT).show()
-//                    }
-//                })
-//        }
-//    }
     private fun generateRandomLocation() {
         val latitude = Random.nextDouble(-90.0, 90.0)
         val longitude = Random.nextDouble(-180.0, 180.0)
         binding.etLocationText.setText("$latitude, $longitude")
+    }
+
+    private fun hideKeyboard() {
+        val imm =
+            activity?.getSystemService(android.content.Context.INPUT_METHOD_SERVICE) as? android.view.inputmethod.InputMethodManager
+        imm?.hideSoftInputFromWindow(view?.windowToken, 0)
     }
 
 }
