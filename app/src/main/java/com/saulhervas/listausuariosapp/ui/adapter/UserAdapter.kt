@@ -29,4 +29,19 @@ class UserAdapter : RecyclerView.Adapter<UserViewHolder>() {
         this.users = users
         notifyDataSetChanged()
     }
+    fun updateDataset(users: List<User>) {
+        this.users = users
+        notifyDataSetChanged()
+    }
+
+    fun clearDataset() {
+        this.users = emptyList()
+        notifyDataSetChanged()
+    }
+
+    fun getUserAt(position: Int): User {
+        return users[position]
+    }
+
+
 }

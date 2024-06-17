@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.jetbrainsKotlinAndroid)
     id("androidx.navigation.safeargs.kotlin")
     id("kotlin-kapt")
+    id("kotlin-parcelize")
 
 }
 
@@ -70,6 +71,7 @@ dependencies {
     kapt("androidx.room:room-compiler:$room_version")
     implementation("androidx.room:room-ktx:$room_version")
 
+    implementation("com.google.android.gms:play-services-location:21.0.1")
     implementation (libs.play.services.maps)
     implementation(libs.material)
     implementation(libs.androidx.activity)

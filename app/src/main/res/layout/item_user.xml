@@ -4,10 +4,11 @@
     android:layout_width="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_height="60dp"
-    android:layout_margin="6dp"
-    app:cardBackgroundColor="@color/color_toolbar"
+    android:layout_margin="4dp"
+    app:cardBackgroundColor="#7D6E75"
     app:cardCornerRadius="15dp"
-    app:cardElevation="5dp">
+    app:cardElevation="5dp"
+    android:id="@+id/rowLayout">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -20,7 +21,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_margin="20dp"
-            android:textColor="@color/white"
+            android:fontFamily="@font/poetsen_one_regular"
+            android:textColor="@color/black"
             android:textSize="15sp"
             tools:text="1" />
 
@@ -30,7 +32,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_margin="20dp"
-            android:textColor="@color/white"
+            android:fontFamily="@font/poetsen_one_regular"
+            android:textColor="@color/black"
             android:textSize="15sp"
             tools:text="Pepe" />
 
@@ -40,7 +43,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_margin="20dp"
-            android:textColor="@color/white"
+            android:fontFamily="@font/poetsen_one_regular"
+            android:textColor="@color/black"
             android:textSize="15sp"
             tools:text="26/11/1988" />
 
