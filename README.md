@@ -3,6 +3,6 @@ Aplicacion para registrar usuarior
 
 |                               Pantalla Principal                              |                                   Pantalla añadir usuario                                |
 |:------------------------------------------------------------------------------:|:------------------------------------------------------------------------------:|
-|   ![pantalla principal](https://github.com/saulhervas/listaUsuariosApp/assets/136034899/68a3048b-9aba-43be-af0d-425b14e19fee)    |        |
+|   ![pantalla principal](https://github.com/saulhervas/listaUsuariosApp/assets/136034899/df36225e-05fe-4c5a-8279-6d28d4dace47)   |        |
 |                               Pantalla editar usuario                              |    
 |       |         |
