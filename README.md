@@ -30,6 +30,12 @@ Este proyecto demuestra el uso de patrones modernos de desarrollo como MVVM y he
 ### Prerrequisitos
 - Android Studio Arctic Fox o superior.  
 - SDK de Android 21 o superior.
+### Pasos para clonar y ejecutar el proyecto
+- Clona este repositorio:
+  git clone https://github.com/saulhervas/listaUsuariosApp.git
+- Abre el proyecto en Android Studio.
+- Sincroniza las dependencias.
+- Ejecuta la app en un dispositivo o emulador.
 
 
 
