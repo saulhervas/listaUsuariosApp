@@ -9,28 +9,29 @@ Una aplicación simple para gestionar una lista de usuarios, desarrollada con Ko
 ❌ Eliminar usuarios: Elimina usuarios de la lista.
 🌐 Diseño moderno: Interfaz desarrollada con Jetpack Compose para una experiencia fluida y moderna.
 🚀 Tecnologías utilizadas
+
 Kotlin: Lenguaje principal del proyecto.
-Jetpack Compose: Biblioteca declarativa para la UI.
 MVVM: Arquitectura para una separación clara entre UI y lógica.
 Room Database: Persistencia de datos local.
 Hilt: Inyección de dependencias.
 LiveData/StateFlow: Manejo de datos reactivos.
+
 🛠️ Instalación y uso
 Prerrequisitos
 Android Studio Arctic Fox o superior.
 SDK de Android 21 o superior.
 Pasos para clonar y ejecutar el proyecto
+
 Clona este repositorio:
-bash
-Copiar código
 git clone https://github.com/saulhervas/listaUsuariosApp.git
 Abre el proyecto en Android Studio.
 Sincroniza las dependencias (Gradle se encargará automáticamente).
 Ejecuta la app en un dispositivo o emulador configurado.
+
 📦 Estructura del proyecto
 El proyecto sigue el patrón MVVM para facilitar la escalabilidad y mantenimiento.
 
-bash
+
 Copiar código
 listaUsuariosApp/
 ├── data/                # Gestión de datos (Room, repositorios, modelos)
@@ -38,16 +39,17 @@ listaUsuariosApp/
 ├── viewmodel/           # Manejo de estado de la aplicación
 ├── di/                  # Configuración de Hilt
 └── utils/               # Utilidades generales
+
 🤝 Contribuciones
 ¡Las contribuciones son bienvenidas! Si deseas mejorar este proyecto:
 
 Realiza un fork del repositorio.
+
 Crea una nueva rama:
-bash
-Copiar código
 git checkout -b feature/nueva-funcionalidad
 Realiza los cambios y confirma los commits.
 Envía un pull request.
+
 🧑‍💻 Autor
 Desarrollado por Saúl Hervás.
 
