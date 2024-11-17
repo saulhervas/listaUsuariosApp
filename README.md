@@ -37,7 +37,7 @@ Este proyecto demuestra el uso de patrones modernos de desarrollo como MVVM y he
 - Sincroniza las dependencias.
 - Ejecuta la app en un dispositivo o emulador.
 
-🧑‍💻 Autor
+## 🧑‍💻 Autor
 Desarrollado por Saúl Hervás.
 
 ---
