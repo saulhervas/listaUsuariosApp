@@ -15,6 +15,21 @@ Este proyecto demuestra el uso de patrones modernos de desarrollo como MVVM y he
 - 🌐 **Diseño moderno**: Interfaz desarrollada con Jetpack Compose para una experiencia fluida y moderna.  
 
 ---
+## 🚀 Tecnologías utilizadas
+
+- **Kotlin**: Lenguaje principal del proyecto.  
+- **MVVM**: Arquitectura para una separación clara entre UI y lógica.  
+- **Room Database**: Persistencia de datos local.  
+- **Hilt**: Inyección de dependencias.  
+- **LiveData/StateFlow**: Manejo de datos reactivos.  
+
+---
+
+## 🛠️ Instalación y uso
+
+### Prerrequisitos
+- Android Studio Arctic Fox o superior.  
+- SDK de Android 21 o superior.
 
 
 
