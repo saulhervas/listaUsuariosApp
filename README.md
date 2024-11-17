@@ -37,6 +37,14 @@ Este proyecto demuestra el uso de patrones modernos de desarrollo como MVVM y he
 - Sincroniza las dependencias.
 - Ejecuta la app en un dispositivo o emulador.
 
+## 📦 Estructura del proyecto
+listaUsuariosApp/
+├── data/                # Gestión de datos (Room, repositorios, modelos)
+├── ui/                  # Componentes visuales y lógica de UI
+├── viewmodel/           # Manejo de estado de la aplicación
+├── di/                  # Configuración de Hilt
+└── utils/               # Utilidades generales
+
 
 
 |                               Pantalla Principal                              |                                   Pantalla añadir usuario                                |
