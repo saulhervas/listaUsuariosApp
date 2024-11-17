@@ -10,6 +10,7 @@ Una aplicación simple para gestionar una lista de usuarios, desarrollada con Ko
 🌐 Diseño moderno: Interfaz desarrollada con Jetpack Compose para una experiencia fluida y moderna.
 🚀 Tecnologías utilizadas
 
+
 Kotlin: Lenguaje principal del proyecto.
 MVVM: Arquitectura para una separación clara entre UI y lógica.
 Room Database: Persistencia de datos local.
